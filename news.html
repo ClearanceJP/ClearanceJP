@@ -14,26 +14,32 @@
 
 <body>
     <script>
-
         // html読み込み
         $(() => {
             $("header").load("header.html");
             $(".footer").load("footer.html");
         });
 
-        $(function () {
-            $(".fade-img img:not(:first-child)").hide();
-            setInterval(function () {
-                $(".fade-img img:first-child").fadeOut("slow").next("img").fadeIn("slow").end().appendTo(".fade-img");
-            }, 5000);
-        });
+        $(() => {
+            const news = $(".news");
 
+            $.getJSON("./news/contents.json", (data) => {
+                console.log(JSON.stringify(data));
+
+                for (const item of data) {
+                    news.append(`
+                        <h2>${item.title}</h2>
+                        <hr>
+                        <a>${item.content}</a>
+                    `);
+                }
+            });
+        });
     </script>
+
     <header></header>
-    <h1>NEWS / お知らせ</h1>
-    <a class="twitter-timeline" href="https://twitter.com/Clearance1525?ref_src=twsrc%5Etfw">Tweets by Clearance1525</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </main>
+
+    <div class="news"></div>
 </body>
 
 </html>
