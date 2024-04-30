@@ -1,0 +1,56 @@
+main .title {
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+}
+
+main .subtitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+main {
+    overflow: auto;
+}
+
+main .profiles {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    margin: 7.5rem auto;
+}
+
+main .profiles .profile {
+    font-size: 1.5rem;
+    border-radius: 2.5rem;
+    height: 17.5rem;
+    width: 17.5rem;
+    padding: 1rem;
+    margin: auto 1rem;
+}
+
+main .profiles .profile img {
+    border-radius: 50%;
+    width: 6rem;
+    margin: 0.5rem;
+}
+
+main .profiles .profile .profile-name {
+    margin: 0.5rem;
+}
+
+main .profiles .profile .profile-description {
+    margin: 0.5rem;
+}
+
+main .profiles .mori1525 {
+    background: linear-gradient(green, black)
+}
+
+main .profiles .arutaka1220 {
+    background: linear-gradient(teal, black)
+}
+
+main .profiles .reitan5142 {
+    background: linear-gradient(orange, black)
+}

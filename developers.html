@@ -3,34 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta -name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/developers.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Clearance</title>
 </head>
 
 <body>
     <script>
-
         // html読み込み
         $(() => {
             $("header").load("header.html");
-            $(".footer").load("footer.html");
+            $("footer").load("footer.html");
         });
-
-        $(function () {
-            $(".fade-img img:not(:first-child)").hide();
-            setInterval(function () {
-                $(".fade-img img:first-child").fadeOut("slow").next("img").fadeIn("slow").end().appendTo(".fade-img");
-            }, 5000);
-        });
-
     </script>
     <header></header>
-    <h1>デベパ虚無</h1>
+    <main>
+        <h1 class="title">親愛なる開発者たち</h1>
+        <h1 class="subtitle">Shin ai naru Developers</h1>
+        <div class="profiles">
+            <div class="mori1525 profile">
+                <img src="image/profile/mori1525.png" alt="mori1525">
+                <h1 class="profile-name">MORI1525</h1>
+                <h3 class="profile-description">クリアランスの考案者です。ぜひクリアランスを導入してくれると嬉しいです</h3>
+            </div>
+            <div class="arutaka1220 profile">
+                <img src="image/profile/arutaka1220.png" alt="arutaka1220">
+                <h1 class="profile-name">arutaka1220</h1>
+                <h3 class="profile-description">システムの制作と保守をしています！よろしくお願いします！！</h3>
+            </div>
+            <div class="reitan5142 profile">
+                <img src="image/profile/reitan5142.png" alt="reitan5142">
+                <h1 class="profile-name">Reitan5142</h1>
+                <h3 class="profile-description">Webデザイナーをしています！ぜひクリアランスをたくさんのサーバーに広めてほしいです！</h3>
+            </div>
+        </div>
     </main>
+    <footer></footer>
 </body>
 
 </html>
